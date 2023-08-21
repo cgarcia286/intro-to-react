@@ -16,7 +16,6 @@ const defaultTodos = [
 function App() {
   const [searchValue, setSearchValue] = React.useState('');
   const [todos, setTodos] = React.useState(defaultTodos);
-  console.log(`User input: ${searchValue}`);
 
   const todosCompleted = todos.filter(todo => !!todo.completed).length
   const totalTodos = todos.length
@@ -45,7 +44,10 @@ function App() {
   return (
     // This <></> is equivalent to this <React.Fragment><React.Fragment />
     <>
-      <TodoCounter completed={todosCompleted} total={totalTodos}/>
+      <TodoCounter
+        completed={todosCompleted}
+        total={totalTodos}
+      />
       <TodoSearch
         searchValue={ searchValue }
         setSearchValue={ setSearchValue }

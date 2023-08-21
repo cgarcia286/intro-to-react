@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../css/todo/Search.css'
+import '../../static/css/todo/Search.css'
 
 function TodoSearch({ searchValue, setSearchValue }) {
   return(
