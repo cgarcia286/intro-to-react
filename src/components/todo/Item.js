@@ -1,8 +1,8 @@
-function TodoItem () {
+function TodoItem ({ title, completed }) {
   return (
     <li>
-      <span>V</span>
-      <p>Llorar con la Llorona</p>
+      <span>Completed: { completed ? 'yes' : 'no' }</span>
+      <p>{ title }</p>
       <span>X</span>
     </li>
   )
