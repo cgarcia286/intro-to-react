@@ -1,11 +1,10 @@
-import React from 'react';
+// import React from 'react';
 
 import { CreateTodoButton } from './components/todo/Button';
 import { TodoCounter } from './components/todo/Counter';
 import { TodoItem } from './components/todo/Item';
 import { TodoList } from './components/todo/List';
 import { TodoSearch } from './components/todo/Search';
-import './App.css';
 
 const defaultTodos = [
   {text: 'Cortar cebolla',completed: true},
@@ -15,7 +14,8 @@ const defaultTodos = [
 
 function App() {
   return (
-    <React.Fragment>
+    // This <></> is equivalent to this <React.Fragment><React.Fragment />
+    <>
       <TodoCounter completed={5} total={10}/>
       <TodoSearch />
 
@@ -30,7 +30,7 @@ function App() {
       </TodoList>
 
       <CreateTodoButton />
-    </React.Fragment>
+    </>
   );
 }
 
